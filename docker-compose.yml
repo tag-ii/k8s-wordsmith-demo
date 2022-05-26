@@ -4,16 +4,16 @@ services:
 
   db:
     build: ../wordsmith-db
-    image: tagii/k8s-wordsmith-db
+    image: tagii/k8s-wordsmith-db:initial-decomposition
 
   words:
     build: ../wordsmith-words
-    image: tagii/k8s-wordsmith-api
+    image: tagii/k8s-wordsmith-api:initial-decomposition
     deploy:
       replicas: 5
 
   web:
     build: ../wordsmith-web
-    image: tagii/k8s-wordsmith-web
+    image: tagii/k8s-wordsmith-web:initial-decomposition
     ports:
-     - "8080:80"
+     - "8810:80"
